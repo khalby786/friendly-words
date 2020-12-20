@@ -1,40 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>friendly-words api</title>
-    
+
     <style>
-      
-      @import url('https://rsms.me/inter/inter.css');
-      
+      @import url("https://rsms.me/inter/inter.css");
+
       body {
         font-family: "Inter", sans-serif;
         margin: 15vw;
       }
-      
     </style>
   </head>
   <body>
-    
-    <h1>
-      friendly-words api.
-    </h1>
-    
-    <h3>
-      API for the <a href="https://www.npmjs.com/package/friendly-words"><code>friendly-words</code> npm package by Glitch.</a>
-    </h3>
-    
+    <h1 id="friendly-words">friendly-words</h1>
     <p>
-      Get the latest comic: <br><a href="https://getxkcd.now.sh/api/comic?num=latest">https://getxkcd.now.sh/api/comic?num=latest</a>
+      API for the
+      <a href="https://www.npmjs.com/package/friendly-words"
+        ><code>friendly-words</code> npm package by Glitch.</a
+      >
     </p>
-    
+    <h2 id="endpoints">Endpoints</h2>
+    <p><code>https://friendlywords.now.sh/api/predicates</code></p>
+    <pre><code class="lang-json">{
+    <span class="hljs-attr">"predicates"</span>: [ <span class="hljs-string">"thorn"</span> ] 
+}
+</code></pre>
+    <p><code>https://friendlywords.now.sh/api/objects</code></p>
+    <pre><code class="lang-json">{
+    <span class="hljs-attr">"objects"</span>: [ <span class="hljs-string">"glitter"</span> ]
+}
+</code></pre>
+    <p><code>https://friendlywords.now.sh/api/teams</code></p>
+    <pre><code class="lang-json">{
+    <span class="hljs-attr">"teams"</span>: [ <span class="hljs-string">"conglomerate"</span> ]
+}
+</code></pre>
+    <p><code>https://friendlywords.now.sh/api/collections</code></p>
+    <pre><code class="lang-json">{
+    <span class="hljs-attr">"collections"</span>: [ <span class="hljs-string">"nest"</span> ]
+}
+</code></pre>
+    <p><code>https://friendlywords.now.sh/api/word-pairs</code></p>
+    <pre><code class="lang-json">{
+  <span class="hljs-attr">"paired_words"</span>: [
+    <span class="hljs-string">"boatneck-emperor"</span>
+  ]
+}
+</code></pre>
+    <p><code>https://friendlywords.now.sh/api/team-pairs</code></p>
+    <pre><code class="lang-json">{
+  <span class="hljs-attr">"paired_teams"</span>: [
+    <span class="hljs-string">"positive-lineup"</span>
+  ]
+}
+</code></pre>
+    <p><code>https://friendlywords.now.sh/api/collection-pairs</code></p>
+    <pre><code class="lang-json">{
+  <span class="hljs-attr">"paired_words"</span>: [
+    <span class="hljs-string">"flicker-playlist"</span>
+  ]
+}
+</code></pre>
     <p>
-      Get a particular comic with the comic number: <br><a href="https://getxkcd.now.sh/api/comic?num=2355">https://getxkcd.now.sh/api/comic?num=2355</a>
+      All the above endpoints return one word each. If you want more than one
+      word or word pairs, append <code>?num=NUMBER_OF_WORDS</code> to the URL.
     </p>
-    
+    <p><em>Example:</em></p>
     <p>
-      <i>Built with <strike>love</strike> code by <a href="https://khaleelgibran.com">Khaleel Gibran</a>.</i> 
+      <a href="https://friendlywords.now.sh/api/collections?num=20"
+        >https://friendlywords.now.sh/api/collections?num=20</a
+      >
     </p>
-    
+    <pre><code class="lang-json">{
+  <span class="hljs-attr">"collections"</span>: [
+    <span class="hljs-string">"supply"</span>,
+    <span class="hljs-string">"potpourri"</span>,
+    <span class="hljs-string">"pack"</span>,
+    <span class="hljs-string">"batch"</span>,
+    <span class="hljs-string">"list"</span>,
+    <span class="hljs-string">"bouquet"</span>,
+    <span class="hljs-string">"troupe"</span>,
+    <span class="hljs-string">"assembly"</span>,
+    <span class="hljs-string">"stockpile"</span>,
+    <span class="hljs-string">"cumulation"</span>,
+    <span class="hljs-string">"herd"</span>,
+    <span class="hljs-string">"jumble"</span>,
+    <span class="hljs-string">"organization"</span>,
+    <span class="hljs-string">"mix"</span>,
+    <span class="hljs-string">"miscellany"</span>,
+    <span class="hljs-string">"florilegium"</span>,
+    <span class="hljs-string">"album"</span>,
+    <span class="hljs-string">"compilation"</span>,
+    <span class="hljs-string">"store"</span>,
+    <span class="hljs-string">"selection"</span>
+  ]
+}
+</code></pre>
+
+    <p>
+      <i
+        >Built with <strike>love</strike> code by
+        <a href="https://khaleelgibran.com">Khaleel Gibran</a>.</i
+      >
+    </p>
   </body>
 </html>
