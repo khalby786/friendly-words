@@ -1,0 +1,19 @@
+{
+  "name": "friendly-words-api",
+  "version": "1.0.0",
+  "description": "API for the friendly-words npm package. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Khaleel Gibran <khalby786@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "friendly-words": "^1.1.10",
+    "lodash.samplesize": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.8.5"
+  }
+}
